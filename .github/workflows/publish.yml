@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
       - uses: docker://pandoc/core:2.9
         with:
-          args: |>
+          args: |
             -r gfm 
             --template=ihe_template 
             --metadata title="HIE-Whitepaper" 
