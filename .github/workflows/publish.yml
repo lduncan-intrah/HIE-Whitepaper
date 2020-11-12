@@ -17,7 +17,7 @@ jobs:
       - name: Convert to HTML
         run: |
           sudo apt install pandoc
-          gen-html.sh
+          ./gen-html.sh
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
