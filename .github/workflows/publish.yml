@@ -17,7 +17,7 @@ jobs:
       - uses: docker://pandoc/core:2.9
         with:
           args: -r gfm --template=ihe_template --metadata title="HIE-Whitepaper" -w html -o docs/index.html README.md
-        run: |
+      - run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Publish to HTML" -a
