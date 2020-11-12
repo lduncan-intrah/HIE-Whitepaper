@@ -17,11 +17,7 @@ jobs:
       - uses: docker://pandoc/core:2.9
         with:
           args: -r gfm --template=ihe_template --metadata title="HIE-Whitepaper" -w html -o docs/index.html README.md
-      - run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m "Publish to HTML" -a
-      - uses: ad-m/github-push-action@master
+      - uses: actions/upload-artifact@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
+          name: docs
+          path: docs
