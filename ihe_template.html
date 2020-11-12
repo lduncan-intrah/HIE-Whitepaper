@@ -13,7 +13,7 @@ $if(keywords)$
     <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
 $endif$
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-    <link xmlns="" rel="stylesheet" href="css/styles.css" />
+    <link xmlns="" rel="stylesheet" href="$if(path-prefix)$$path-prefix$$endif$css/styles.css" />
     <style type="text/css">
         code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -97,11 +97,11 @@ $endif$
       <p class="copyright">Copyright © 2020: IHE International, Inc.</p>
     </footer>
 
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/motion-ui.min.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="$if(path-prefix)$$path-prefix$$endif$js/vendor/jquery.min.js"></script>
+    <script src="$if(path-prefix)$$path-prefix$$endif$js/vendor/motion-ui.min.js"></script>
+    <script src="$if(path-prefix)$$path-prefix$$endif$js/vendor/what-input.js"></script>
+    <script src="$if(path-prefix)$$path-prefix$$endif$js/vendor/foundation.min.js"></script>
+    <script src="$if(path-prefix)$$path-prefix$$endif$js/app.js"></script>
 
 $for(include-after)$
 $include-after$
